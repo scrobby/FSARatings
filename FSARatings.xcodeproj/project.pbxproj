@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C363C3AD1D69B72300BFE354 /* FSARatings.h in Headers */ = {isa = PBXBuildFile; fileRef = C363C3AC1D69B72300BFE354 /* FSARatings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C363C3B71D69B75400BFE354 /* FSARatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363C3B61D69B75400BFE354 /* FSARatingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C363C3A91D69B72300BFE354 /* FSARatings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSARatings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C363C3AC1D69B72300BFE354 /* FSARatings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSARatings.h; sourceTree = "<group>"; };
 		C363C3AE1D69B72300BFE354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C363C3B61D69B75400BFE354 /* FSARatingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSARatingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				C363C3AC1D69B72300BFE354 /* FSARatings.h */,
 				C363C3AE1D69B72300BFE354 /* Info.plist */,
+				C363C3B61D69B75400BFE354 /* FSARatingsView.swift */,
 			);
 			path = FSARatings;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C363C3B71D69B75400BFE354 /* FSARatingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +234,7 @@
 		C363C3B21D69B72300BFE354 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -240,12 +245,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlgoldsmith.FSARatings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C363C3B31D69B72300BFE354 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -278,6 +285,7 @@
 				C363C3B31D69B72300BFE354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
