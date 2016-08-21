@@ -17,31 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's all this shouting about?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ku5-Wb-zzC">
-                                <rect key="frame" x="183" y="171" width="234" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7p-27-uUp" customClass="FSARatingsView" customModule="FSARatingsViewExampleApp" customModuleProvider="target">
-                                <rect key="frame" x="150" y="200" width="300" height="200"/>
+                                <rect key="frame" x="155" y="226" width="290" height="148"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentRating">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-Hu-BPP">
+                                <rect key="frame" x="153" y="416" width="294" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LEC-qM-OfS"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W7p-27-uUp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AMH-5a-edh"/>
-                            <constraint firstItem="W7p-27-uUp" firstAttribute="top" secondItem="Ku5-Wb-zzC" secondAttribute="bottom" constant="8" id="GdU-S8-9aQ"/>
-                            <constraint firstItem="Ku5-Wb-zzC" firstAttribute="centerX" secondItem="W7p-27-uUp" secondAttribute="centerX" id="UFp-6X-4Tr"/>
                             <constraint firstItem="W7p-27-uUp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VJR-bc-ldb"/>
+                            <constraint firstItem="cRO-Hu-BPP" firstAttribute="centerX" secondItem="W7p-27-uUp" secondAttribute="centerX" id="bE8-W5-2eM"/>
+                            <constraint firstItem="cRO-Hu-BPP" firstAttribute="width" secondItem="W7p-27-uUp" secondAttribute="width" id="f5G-Cu-yCY"/>
+                            <constraint firstItem="cRO-Hu-BPP" firstAttribute="top" secondItem="W7p-27-uUp" secondAttribute="bottom" constant="42" id="lCC-Gb-rwg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ratingsView" destination="W7p-27-uUp" id="iBs-76-KVU"/>
+                        <outlet property="slider" destination="cRO-Hu-BPP" id="Dgf-M6-Fsy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="136"/>
         </scene>
     </scenes>
 </document>

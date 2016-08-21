@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var ratingsView: FSARatingsView!
+    @IBOutlet var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        ratingsView.backgroundColor = .greenColor()
-        ratingsView.setCurrentRatingTo(20, animated: true)
-        ratingsView.setNeedsDisplay()
-        ratingsView.setNeedsLayout()
+        
+        slider.setValue(2, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +27,8 @@ class ViewController: UIViewController {
         ratingsView.setNeedsLayout()
     }
 
-
+    @IBAction func sliderChanged(sender: UISlider) {
+        ratingsView.setCurrentRatingTo(Int(slider.value), animated: false)
+    }
 }
 
